@@ -13,7 +13,7 @@
     <title>Vue To Do List</title>
 </head>
 <body>
-    <div id="app">
+    <div id="app" v-cloak>
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">
@@ -24,14 +24,12 @@
         </nav>
         <div class="container">
             <div class=" mb-4 mt-4 d-flex justify-content-center">
-                <input class="form-control" style="width: 550px;" type="text" placeholder="Add your ToDo list" aria-label="Add your item here...">
+                <input class="form-control" style="width: 550px;" type="text" placeholder="Add your ToDo list" aria-label="Add your ToDo list">
                 <button type="button" class="btn btn-primary mx-2">Add</button>
             </div>
-            <ol class="list-group list-group-numbered m-auto" style="width: 550px;">
-                <li class="list-group-item">A list item</li>
-                <li class="list-group-item">A list item</li>
-                <li class="list-group-item">A list item</li>
-            </ol>
+            <ul class="list-group list-group m-auto" style="width: 550px;" v-for="(todo, index) in todolist">
+                <li class="list-group-item">{{ todo.text }}</li>
+            </ul>
         </div>
     </div>
 <!-- VueJS -->
