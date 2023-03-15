@@ -4,18 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- bootstrap -->
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- CSS -->
     <title>Vue To Do List</title>
 </head>
 <body>
-    
-
-
-    <!-- VueJS -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <!-- My JS -->
-    <script src="JS/main.js"></script>
+    <div id="app">
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="https://vuejs.org/images/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                Vue To Do List
+              </a>
+            </div>
+        </nav>
+        <div class="container">
+            <div class=" mb-4 mt-4 d-flex justify-content-center">
+                <input class="form-control" style="width: 550px;" type="text" placeholder="Add your ToDo list" aria-label="Add your item here...">
+                <button type="button" class="btn btn-primary mx-2">Add</button>
+            </div>
+            <ol class="list-group list-group-numbered m-auto" style="width: 550px;">
+                <li class="list-group-item">A list item</li>
+                <li class="list-group-item">A list item</li>
+                <li class="list-group-item">A list item</li>
+            </ol>
+        </div>
+    </div>
+<!-- VueJS -->
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<!-- My JS -->
+<script src="JS/main.js"></script>
 </body>
 </html>
